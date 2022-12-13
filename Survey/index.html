@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Survey Form</title>
+</head>
+
+  <body>
+    <header>
+        <div>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">What do you think about our website?</p>
+        </div>
+  </header>
+
+    <form id="survey-form">
+
+    <label for="name" id="name-label">Please enter your name: </label><br>
+    <input id="name" type="text" placeholder="John Doe" style="height:25px;width:500px;" required/>
+      <hr>
+    <label for="email" id="email-label">Please enter your email: </label><br>
+    <input id="email" type="email" placeholder="example@mail.com" style="height:25px;width:500px;" required/>
+      <hr>
+    <label for="number" id="number-label">Please enter your age: </label>
+    <input id="number" type="number" min="5" max="100" placeholder="21" style="height:25px;width:500px;" required/><br><br>
+
+    <label for="dropdown">Select one</label>
+      <select id="dropdown">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <hr>
+
+<!--radio buttons begin-->
+      <fieldset>
+      <legend>What is your favorite language</legend>
+          <label for="html">HTML</label><input class="inline" type="radio" id="html" name="fav-language" value="HTML">
+          <label for="css">CSS</label><input class="inline" type="radio" id="css" name="fav-language" value="CSS">
+          <label for="javascript">Javascript</label><input class="inline" type="radio" id="javascript" name="fav-language" value="Javascript"> 
+    </fieldset>
+
+    <hr>
+
+<!--radio buttons end-->
+<!--begin checkboxes-->
+    <fieldset>
+      <legend>Who is your favorite Super Hero?</legend>
+    <div>
+        <label for="superman">
+          <input id="superman" type="checkbox" name="fav-hero" value="Superman" required>
+          Superman
+          </label>
+        <label for="batman">
+          <input id="batman" type="checkbox" name="fav-hero" value="Batman">
+          Batman
+          </label>
+        <label for="spiderman">
+          <input id="spiderman" type="checkbox" name="fav-hero" value="Spiderman">
+          Spiderman
+          </label>
+        <label for="black panther">
+          <input id="black panther" type="checkbox" name="fav-hero" value="Black Panther">
+          Black Panther
+          </label>
+          <hr>
+
+    </div>
+    </fieldset> <br>
+<!--checkboxes end-->
+<!--textbox begins-->
+    <fieldset>
+      <div>
+        <label for="comments">Add additional comments here: </label><br>
+        <textarea id="comments" style="height:50px;width:500px" rows="3" cols="30" placeholder="Comment here.."></textarea>
+      </div>
+    </fieldset>
+        <input type="submit" id="submit" value="Submit"/>
+  </form> 
+  
+  </body>
+
+</html>

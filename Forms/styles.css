@@ -1,0 +1,94 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: #1b1b32;
+    color: #f5f6f7; 
+    font-family: Tahoma;
+    font-size: 16px; 
+}
+
+h1, p {
+    margin: 1em auto;
+    text-align: center; 
+}
+
+form {
+    margin: 0 auto;
+    max-width: 500px;
+    min-width: 300px;
+    width: 60vw; /* vw = viewport, edits and configs the different types of screen sizes both on monitors and  mobile phones */ 
+    padding: 2em; 
+}
+/* rem unit stands for root em. Label elements display all on same line. 
+Use label element below to seperate them on different lines */ 
+label {
+    display: block;
+    margin: 0.5rem 0; 
+}
+
+fieldset {
+     border: none;
+     padding: 2rem;
+     padding-right: 0;
+     padding-left: 0; 
+     border-bottom: 3px solid #3b3b4f /* Gives the lines of seperation among the form page */ 
+}
+
+/* Border of the last fieldset looked out of place. You can use "p:last-of-place" that creates a new selector that targets the last element and sets the border to none*/
+fieldset:last-of-type {
+    border-bottom: none;
+}
+
+/* Select all input, textarea, and select elements and make them take up the full width of their parent elements */
+/* Also add 10px of margin to the top of the selected elements. Set other margins to 0 */
+input, textarea, select {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px; 
+    min-height: 2em;
+}
+
+input, textarea {
+    background-color: #0a0a23;
+    border: 1px solid #0a0a23; 
+    /* Currently you cannot see text when typed and the height is too small. So fix that byu adding these next line*/
+    color: #ffffff;
+}
+
+/* Change text color of the terms and conditions link */
+a {
+    color: #dfdfe2; 
+}
+
+.inline {
+    width: unset; 
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0.5em;
+    /* margin: 0 0.5em 0 0; is a shortcut to input top, bottom, right, left margins */ 
+    vertical-align: middle;
+}
+
+/* Style the Submit Button */
+input[type="submit"] {
+    display: block;
+    width: 60%; 
+    margin: 0 auto; /* Submit button was off to the left side. This centers the button; same way it centers the form from earlier */ 
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #3b3b4f;
+    border-color: white; 
+    margin: 1em;
+    margin-left: auto;
+    margin-right: auto; 
+    min-width: 300px; 
+     
+}
+
+input[type="file"] {
+    padding: 1px 2px; 
+}
