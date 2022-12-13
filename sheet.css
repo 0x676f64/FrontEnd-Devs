@@ -1,0 +1,68 @@
+/* rgb function in CSS = rgb(red, green, blue)   in that order using number */ 
+
+h1 {
+    text-align: center; 
+}
+
+.container {
+    background-color: rgb(255, 255, 255); /* 0, 0, 0 = Black */ 
+    padding: 10px 0; /* short hand version that combines both top and bottom padding */ 
+}
+
+.marker {
+    height: 25px;
+    width: 200px;
+    /* The margin's below allow the marker to be centered */
+    /* margin-top: auto;
+    margin-bottom: auto; */
+    margin: auto; /* combines top and bottom */ 
+    margin-left: auto;
+    margin-right: auto; 
+    margin-left: auto;
+    margin-right: auto;
+    margin: 10px auto; 
+}
+
+.cap {
+    width: 60px;
+    height: 25px; 
+}
+
+.sleeve {
+    width: 110px;
+    height: 25px; 
+    background-color: rgba(255, 255, 255, 50%); /* rgba, a = alpha which has to do with opacity, hence the percentage in the final value */
+    border-left-width: 10px; 
+    border-left-style: double; /* gives the marker that black line. Solid a single one, double gives two seperate */ 
+    border-left-color: rgba(0, 0, 0, 75%); 
+    /* border-left: 10px solid black;  This combines all 3 from above (width style and color) */ 
+}
+
+.cap, .sleeve {
+    display: inline-block; /* Allows two div elements on the same line to be displayed */
+}
+/* Teritiary colors are created by combining a primary with a nearby secondary color */
+/* Notice the linear-gradient function colors are all done differently */
+.red {
+    /* background-color: red;  this is the easy way to do it */ 
+    /* background-color: rgb(255, 0, 0); /* rgb function way */ 
+    /* linear-gradient allows for multiples colors to mix within a single image */
+    background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27)); 
+    box-shadow: 0 0 20px 0 rgba(83, 14, 14, 80%) /* let's you apply more shadows to make it look more real */ 
+    /* box-shadow value looks like this: box-shadow: offsetX offsetY blurRadius spreadRadius color; */ 
+
+}
+
+.green {
+    /* background-color: #007F00; /* can use hex instead of RGB functions to get colors rendered */ 
+    background: linear-gradient(#55680D, #71F53E, #116C31);
+    box-shadow: 0 0 20px 0 #3B7E20CC; /* no blueRadius means it's 0 by default */ 
+    /* CC on the end of the hex = the alpha channel */ 
+}
+
+.blue {
+    /* background-color: hsl(240, 100%, 50%); /* hsl = hue, saturation, and lightness is another way to rep colors. It accepts 3 values. a number from 0 to 360 for hue, a percentage of 0 to 100 for saturation and another for lightness */
+    background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+    box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 80%);
+    /* 80% is thje alpha channel or opacity */  
+}
